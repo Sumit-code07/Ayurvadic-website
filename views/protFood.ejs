@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>protFood</title>
+    <link rel="stylesheet" href="/landingPage.css">
+    <link rel="stylesheet" href="/protFood.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="/image/logo.png">
+            <h4 style="color: #196c7a;">Veda</h4><h4 style="color: #ff6a02;">care</h4>
+        </div>
+        <div class="tab">
+            <ul type="none">
+                <li><a href="http://localhost:8080/home">Home</a></li>
+                <li><a href="http://localhost:8080/doctor">Doctors</a></li>
+                <li><a href="http://localhost:8080/dhosa">Dosha calculatar</a></li>
+                <li><a href="http://localhost:8080/home#deit">Diet Planner</a></li>
+            </ul>
+        </div>
+        <div class="more"><i class="fa-solid fa-bars"></i></div>
+    </header>
+    <div class="nav-bar">
+        <div class="Close"><i class="fa-solid fa-xmark"></i></div>
+        <div class="user-detail">
+            <div class="user-logo"></div>
+            <div>
+                <h2>Sumit Kumar</h2>
+                <p>Welcome! You are in bar page</p>
+            </div>
+        </div>
+        <div class="nav-bar-option">
+            <button type="button" onclick="window.location.href='http://localhost:8080/allfood';">All Foods</button>
+            <button type="button" onclick="window.location.href='http://localhost:8080/ayurFood';">Ayurvada view</button>
+            <button type="button" onclick="window.location.href='http://localhost:8080/prot';">Nutrients view</button>
+            <button type="button" onclick="window.location.href='http://localhost:8080/data';">Calculate Diet</button>
+        </div>
+    </div>
+    <div class="all">
+        <h1>Nutritional View</h1>
+        <div class="search">
+            <input type="text" placeholder="search..">
+            <select class="grains">
+                <option>Grains</option>
+                <option>Gram</option>
+                <option>Mustard</option>
+                <option>Fox Nuts</option>
+                <option>Corn Meal</option>
+                <option>Foxtail Millet</option>
+                <option>Kidney Beans</option>
+                <option>Maize</option>
+                <option>Brown Rice</option>
+                <option>Finger Millet</option>
+                <option>Sesame Seeds</option>
+                <option>Wheat</option>
+                <option>Rice</option>
+                <option>Paddy Seeds</option>
+                <option>Sago</option>
+            </select>
+            <select class="vegi">
+                <option>Vegetable</option>
+                <option>Cucumber</option>
+                <option>Carrot</option>
+                <option>Spinach</option>
+                <option>Mushroom</option>
+                <option>Sweet Patato</option>
+                <option>Pea</option>
+                <option>Coriander</option>
+                <option>Tamato</option>
+                <option>Bitter gourd</option>
+                <option>Pumpkin</option>
+                <option>Turnip</option>
+                <option>Chilli</option>
+                <option>Beans</option>
+                <option>Onion</option>
+            </select>
+
+            <select class="Fruit">
+                <option>Fruit</option>
+                <option>Apple</option>
+                <option>Orange</option>
+                <option>Banana</option>
+                <option>Guava</option>
+                <option>Litchi</option>
+                <option>Plum</option>
+                <option>Pine Apple</option>
+                <option>Black Berry</option>
+                <option>Mango</option>
+                <option>Strawberry</option>
+                <option>Grapes</option>
+                <option>Kiwi</option>
+                <option>Papaya</option>
+                <option>Pear</option>
+            </select>
+        </div>
+        <div class="ayur-items">
+            <div class="ayur-card">
+                <img src="https://media.istockphoto.com/id/1310279351/photo/macro-close-up-of-organic-green-gram-or-whole-green-moong-dal-on-a-white-ceramic-soup-spoon.jpg?s=612x612&w=0&k=20&c=Egs5PIbNT46cLexABLLAwQ1mjp4cH6qGbYK3KYEkY3Q="alt="">
+                <h3 style="color: brown;">Moong Dal (Green Gram)</h3>
+                <h4>Nutritional Data (per 100g):</h4>
+                <ul type="none">
+                    <li><b>Calories:</b>347</li>
+                    <li><b>Carbs:</b> 63g</li>
+                    <li><b>Protein:</b> 24g</li>
+                    <li><b>Fat:</b>1.2g</li>
+                    <li><b>Fiber:</b> 8g</li>
+                    <li><b>Calcium:</b>132mg</li>
+                    <li><b>Iron:</b>6.7mg</li>
+                    <li><b>Magnesium:</b>189mg</li>
+                </ul>
+            </div>
+
+            <div class="ayur-card">
+                <img src="https://static.india.com/wp-content/uploads/2022/08/brown-rice.jpg" alt="">
+                <h3 style="color: brown;">Brown Rice</h3>
+                <h4>Nutritional Data (per 100g):</h4>
+                <ul type="none">
+                    <li><b>Calories:</b>111</li>
+                    <li><b>Carbs:</b>23g</li>
+                    <li><b>Protein:</b>2.6g</li>
+                    <li><b>Fat:</b>0.9g</li>
+                    <li><b>Fiber:</b>1.8g</li>
+                    <li><b>Calcium:</b>10mg</li>
+                    <li><b>Iron:</b>0.4mg</li>
+                    <li><b>Magnesium:</b>43mg</li>
+                </ul>
+            </div>
+
+            <div class="ayur-card">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.Hr6cB3W-p0Hhabzefj87LQHaHa?pid=Api&P=0&h=220" alt="">
+                <h3 style="color: brown;">Spinach (Palak)</h3>
+                <h4>Nutritional Data (per 100g):</h4>
+                <ul type="none">
+                    <li><b>Calories:</b>23</li>
+                    <li><b>Carbs:</b> 3.6g</li>
+                    <li><b>Protein:</b> 2.9g</li>
+                    <li><b>Fat:</b>0.4g</li>
+                    <li><b>Fiber:</b> 2.2g</li>
+                    <li><b>Calcium:</b>99mg</li>
+                    <li><b>Iron:</b>2.7mg</li>
+                    <li><b>Magnesium:</b>79mg</li>
+                </ul>
+            </div>
+            <div class="ayur-card">
+                <img src="https://assets.telegraphindia.com/abp/2023/May/1685262397_new-project-2023-05-28t135522-421.jpg"alt="">
+                <h3 style="color: brown;"> Curd (Dahi)</h3>
+                <h4>Nutritional Data (per 100g):</h4>
+                <ul type="none">
+                    <li><b>Calories:</b>98</li>
+                    <li><b>Carbs:</b> 3.4g</li>
+                    <li><b>Protein:</b> 11g</li>
+                    <li><b>Fat:</b>4.3g</li>
+                    <li><b>Fiber:</b> 0g</li>
+                    <li><b>Calcium:</b>83mg</li>
+                    <li><b>Iron:</b>0.1mg</li>
+                    <li><b>Magnesium:</b>11mg</li>
+                </ul>
+            </div>
+            <div class="ayur-card">
+                <img src="https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2018/4/25/3/shutterstock_440493100_5-second-Studio_carrots.jpg.rend.hgtvcom.1280.853.suffix/1524688181811.jpeg" alt="">
+                <h3 style="color: brown;"> Carrot (Gajar)</h3>
+                <h4>Nutritional Data (per 100g):</h4>
+                <ul type="none">
+                    <li><b>Calories:</b>41</li>
+                    <li><b>Carbs:</b> 9.6g</li>
+                    <li><b>Protein:</b> 0.9g</li>
+                    <li><b>Fat:</b>0.2g</li>
+                    <li><b>Fiber:</b> 2.8g</li>
+                    <li><b>Calcium:</b>33mg</li>
+                    <li><b>Iron:</b>0.3mg</li>
+                    <li><b>Magnesium:</b>12mg</li>
+                </ul>
+            </div>
+
+            <div class="ayur-card">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.N-DW1y4qF72ayjQ5D0V8bAHaEK?pid=Api&P=0&h=220" alt="">
+                <h3 style="color: brown;"> Cucumber (Kheera)</h3>
+                <h4>Nutritional Data (per 100g):</h4>
+                <ul type="none">
+                    <li><b>Calories:</b>15</li>
+                    <li><b>Carbs:</b> 3.6g</li>
+                    <li><b>Protein:</b> 0.7g</li>
+                    <li><b>Fat:</b>0.1g</li>
+                    <li><b>Fiber:</b> 0.5g</li>
+                    <li><b>Calcium:</b>16mg</li>
+                    <li><b>Iron:</b>0.3mg</li>
+                    <li><b>Magnesium:</b>13mg</li>
+                </ul>
+            </div>
+
+            <div class="ayur-card">
+                <img src="https://aromaticessence.co/wp-content/uploads/2022/01/toor_dal.jpg?is-pending-load=1" alt="">
+                <h3 style="color: brown;">Toor Dal (Arhar Dal)</h3>
+                <h4>Nutritional Data (per 100g):</h4>
+                <ul type="none">
+                    <li><b>Calories:</b>335</li>
+                    <li><b>Carbs:</b> 62g</li>
+                    <li><b>Protein:</b> 22g</li>
+                    <li><b>Fat:</b>1.5g</li>
+                    <li><b>Fiber:</b> 8g</li>
+                    <li><b>Calcium:</b>73mg</li>
+                    <li><b>Iron:</b>5.8mg</li>
+                    <li><b>Magnesium:</b>110mg</li>
+                </ul>
+            </div>
+            <div class="ayur-card">
+                <img src="https://www.fruitionseeds.com/wp-content/uploads/social-apple-querina.jpg"
+                    alt="">
+                <h3 style="color: brown;">Apple (Seb)</h3>
+                <h4>Nutritional Data (per 100g):</h4>
+                <ul type="none">
+                    <li><b>Calories:</b>52</li>
+                    <li><b>Carbs:</b> 14g</li>
+                    <li><b>Protein:</b> 0.3g</li>
+                    <li><b>Fat:</b>0.2g</li>
+                    <li><b>Fiber:</b> 2.4g</li>
+                    <li><b>Calcium:</b>6mg</li>
+                    <li><b>Iron:</b>0.1mg</li>
+                    <li><b>Magnesium:</b>5mg</li>
+                </ul>
+            </div>
+            <div class="ayur-card">
+                <img src="https://kj1bcdn.b-cdn.net/media/81142/wheat.jpg"alt="">
+                <h3 style="color: brown;"> Wheat (Gehu)</h3>
+                <h4>Nutritional Data (per 100g):</h4>
+                <ul type="none">
+                    <li><b>Calories:</b>327</li>
+                    <li><b>Carbs:</b> 71g</li>
+                    <li><b>Protein:</b> 12g</li>
+                    <li><b>Fat:</b>1.5g</li>
+                    <li><b>Fiber:</b> 12g</li>
+                    <li><b>Calcium:</b>30mg</li>
+                    <li><b>Iron:</b>3.6mg</li>
+                    <li><b>Magnesium:</b>138mg</li>
+                </ul>
+            </div>
+
+            <div class="ayur-card">
+                <img src="https://www.healthifyme.com/blog/wp-content/uploads/2023/06/shutterstock_1047605842-1.jpg" alt="">
+                <h3 style="color: brown;">Bottle Gourd (Lauki)</h3>
+                <h4>Nutritional Data (per 100g):</h4>
+                <ul type="none">
+                    <li><b>Calories:</b>14</li>
+                    <li><b>Carbs:</b> 3.4g</li>
+                    <li><b>Protein:</b> 0.6g</li>
+                    <li><b>Fat:</b>0.1g</li>
+                    <li><b>Fiber:</b> 0.5g</li>
+                    <li><b>Calcium:</b>26mg</li>
+                    <li><b>Iron:</b>0.2mg</li>
+                    <li><b>Magnesium:</b>11mg</li>
+                </ul>
+            </div>
+
+            <div class="ayur-card">
+                <img src="https://mixmirth.com/wp-content/uploads/2024/05/homemade-hot-honey-recipe.jpg" alt="">
+                <h3 style="color: brown;">Honey (Madhu)</h3>
+                <h4>Nutritional Data (per 100g):</h4>
+                <ul type="none">
+                    <li><b>Calories:</b>304</li>
+                    <li><b>Carbs:</b> 82g</li>
+                    <li><b>Protein:</b> 0.3g</li>
+                    <li><b>Fat:</b>0g</li>
+                    <li><b>Fiber:</b> 0.2g</li>
+                    <li><b>Calcium:</b>6mg</li>
+                    <li><b>Iron:</b>0.4mg</li>
+                    <li><b>Magnesium:</b>2mg</li>
+                </ul>
+            </div>
+
+            <div class="ayur-card">
+                <img src="https://domf5oio6qrcr.cloudfront.net/medialibrary/15065/conversions/fa246ce0-054b-4892-bf30-5eb43cd938aa-thumb.jpg"alt="">
+                <h3 style="color: brown;"> Turmeric (Haldi)</h3>
+                <h4>Nutritional Data (per 100g):</h4>
+                <ul type="none">
+                    <li><b>Calories:</b>312</li>
+                    <li><b>Carbs:</b> 67g</li>
+                    <li><b>Protein:</b> 9.7g</li>
+                    <li><b>Fat:</b>3.2g</li>
+                    <li><b>Fiber:</b> 22g</li>
+                    <li><b>Calcium:</b>168mg</li>
+                    <li><b>Iron:</b>55mg</li>
+                    <li><b>Magnesium:</b>208mg</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+    <%-include("includes/footer.ejs")%>
+
+    <script src="/landingPage.js"></script>
+</body>

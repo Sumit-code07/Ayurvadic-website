@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    border:2px solid black;
+    height: 90px;
+    width: 100%;
+}
+header h1{
+    height: 160px;
+}
+section{
+    width:100%;
+    height: 990px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+.add-card{
+    border: 2px solid black;
+    width: 260px;
+    height: 399px;
+    padding-top: 10px;
+    position: relative;
+    border-radius: 35px;
+}
+.add-card-img{
+    border: 2px solid black;
+    height: 98px;
+    width: 156px;
+    position: absolute;
+    right: 49px;
+    border-radius: 19px;
+}
+.add-card-data{
+    height: 293px;
+    width: 246px;
+    position: absolute;
+    top: 114px;
+    right: 6px;
+    line-height: 23px;
+    font-size: 17px;
+}
+.add-card button{
+    position: absolute;
+    right: 12px;
+    bottom: 7px;
+    width: 69px;
+    height: 38px;
+    border-radius: 13px;
+    background-color: #85cfdb;
+    border: 0;
+    transition: box-shadow 0.4s ease-in-out 0.1s;
+}
+.add-card button:hover{
+    box-shadow: 2px 2px 8px black;
+}
+.add-card button:active{
+    border: 2px solid #85cfdb;
+    color:#85cfdb;
+    background-color: white;
+}
+.add{
+    height: 50px;
+    width: 223px;
+    border-radius: 21px;
+    position: relative;
+    bottom: 30px;
+    left: 666px;
+    border:0;
+    background: #020024;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    color:white;
+    font-size: large;
+    transition: box-shadow 0.4s ease-in-out 0.1s;
+}
+.add:hover{
+    box-shadow: 3px 3px 8px rgb(0, 0, 0);
+}
+.add:active{
+    border:2px solid black;
+    background: white;
+    color:rgba(0, 212, 255, 1);
+}
+.back{
+    bottom: 78px;
+    height: 42px;
+    position: relative;
+    width: 92px;
+    left: 83px;
+    border-radius: 10px;
+    background-color: #90CAF9;
+}

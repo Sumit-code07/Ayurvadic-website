@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* head part */
+header{
+    width: 100%;
+    height: 73px;;
+    display: flex;
+    position: relative;
+    
+}
+header div{
+    margin-top: 10px;
+    height: 50px;
+}
+.logo{
+    position: absolute;
+    left: 10px;
+    width: 250px;
+    text-align: center;
+}
+.sign-Up{
+    position: absolute;
+    right: 59px;
+    width: 102px;
+    text-align: center;
+}
+.sign-In{
+    position:absolute;
+    right: 207px;
+    width: 102px;
+    text-align: center;
+}
+header button{
+    height: 39px;
+    width: 87px;
+    border-radius: 16px;
+    border:2px solid rgb(73, 185, 233);
+    color:rgb(73, 185, 233);
+    background-color: white;
+    transition:background-color 0.5s ease-in-out 0.2s,
+    color 0.5s ease-in-out 0.2s, box-shadow 0.5s ease-in-out 0.2s;
+}
+header button:hover{
+    box-shadow: 2px 2px 8px black;
+    color:white;
+    background-color:rgb(73, 185, 233);
+}
+
+/* body part */
+.main-img{
+    width: 100%;
+    height: 650px;
+    background-image: url('/image/frontImg.jpg');
+    background-size: cover;
+}
+
+.details{
+    height: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    background: #7bc4e0;
+    background: linear-gradient(90deg, rgba(123, 196, 224, 1) 0%, rgba(220, 237, 244, 1) 24%, rgba(250, 250, 250, 1) 100%, rgba(237, 221, 83, 1) 94%);
+}
+/* cards */
+.card{
+    height: 348px;
+    width: 333px;
+    border-radius: 52px;
+    box-shadow: 2px 2px 8px black;
+    background-color: white;
+    position: relative;
+    bottom: 0;
+    transition:bottom 0.2s ease-in-out 0.2s;
+}
+.card:hover{
+    bottom: 10px;
+}
+.card div{
+    margin: auto;
+    margin-top: 10px;
+}
+.card-img{
+    height: 100px;
+    width: 157px;
+    border:2px solid black;
+}
+.card-data{
+    height: 216px;
+    width: 330px;
+    text-align: center;
+    padding-top: 10px;
+}
+.card-data p{
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: black;
+}
+
+
+

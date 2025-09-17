@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.circle{
+    height: 726px;
+    width: 726px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    left: -381px;
+    background-color: #61a1e7;
+}
+.svg{
+    position: relative;
+    height: 512px;
+    width: 551px;
+    z-index: 3;
+    top: 212px;
+    left: 25px;
+}
+.add-data{
+    height: 500px;
+    width: 791px;
+    border: 2px solid black;
+    border-radius: 20px;
+    position: absolute;
+    left: 452px;
+    top: 91px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px black;
+}
+h1{
+    color:#5a5af7;
+}
+
+.add-data div{
+    line-height: 56px;
+    font-size: 25px;
+    margin-left: 24px;
+}
+.add-data-img{
+    position: absolute;
+    right: 0px;
+    height: 540px;
+    width: 384px;
+    top: 0;
+    border-radius: 0px 13px 13px 0px;
+}
+.add-data button{
+    position: relative;
+    left: 324px;
+    height: 33px;
+    width: 92px;
+    border-radius: 10px;
+    background-color: #80b8e6;
+}

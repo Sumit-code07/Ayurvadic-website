@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllFood</title>
+    <link rel="stylesheet" href="/landingPage.css">
+    <link rel="stylesheet" href="/allFood.css">
+</head>
+
+<body>
+     <header>
+        <div class="logo">
+            <img src="/image/logo.png">
+            <h4 style="color: #196c7a;">Veda</h4><h4 style="color: #ff6a02;">care</h4>
+        </div>
+        <div class="tab">
+            <ul type="none">
+                <li><a href="http://localhost:8080/home">Home</a></li>
+                <li><a href="http://localhost:8080/doctor">Doctors</a></li>
+                <li><a href="http://localhost:8080/dhosa">Dosha calculatar</a></li>
+                <li><a href="http://localhost:8080/home#deit">Diet Planner</a></li>
+            </ul>
+        </div>
+        <div class="more"><i class="fa-solid fa-bars"></i></div>
+    </header>
+    <div class="nav-bar">
+        <div class="Close"><i class="fa-solid fa-xmark"></i></div>
+        <div class="user-detail">
+            <div class="user-logo"></div>
+            <div>
+                <h2>Sumit Kumar</h2>
+                <p>Welcome! You are in bar page</p>
+            </div>
+        </div>
+        <div class="nav-bar-option">
+            <button type="button" onclick="window.location.href='http://localhost:8080/allfood';">All Foods</button>
+            <button type="button" onclick="window.location.href='http://localhost:8080/ayurFood';">Ayurvada view</button>
+            <button type="button" onclick="window.location.href='http://localhost:8080/prot';">Nutrients view</button>
+            <button type="button" onclick="window.location.href='http://localhost:8080/data';">Calculate Diet</button>
+        </div>
+    </div>
+    <div class="all">
+
+        <h1>ALL Foods</h1>
+        <div class="search">
+            <input type="text" placeholder="search..">
+            <select class="grains">
+                <option>Grains</option>
+                <option>Gram</option>
+                <option>Mustard</option>
+                <option>Fox Nuts</option>
+                <option>Corn Meal</option>
+                <option>Foxtail Millet</option>
+                <option>Kidney Beans</option>
+                <option>Maize</option>
+                <option>Brown Rice</option>
+                <option>Finger Millet</option>
+                <option>Sesame Seeds</option>
+                <option>Wheat</option>
+                <option>Rice</option>
+                <option>Paddy Seeds</option>
+                <option>Sago</option>
+            </select>
+            <select class="vegi">
+                <option>Vegetable</option>
+                <option>Cucumber</option>
+                <option>Carrot</option>
+                <option>Spinach</option>
+                <option>Mushroom</option>
+                <option>Sweet Patato</option>
+                <option>Pea</option>
+                <option>Coriander</option>
+                <option>Tamato</option>
+                <option>Bitter gourd</option>
+                <option>Pumpkin</option>
+                <option>Turnip</option>
+                <option>Chilli</option>
+                <option>Beans</option>
+                <option>Onion</option>
+            </select>
+
+            <select class="Fruit">
+                <option>Fruit</option>
+                <option>Apple</option>
+                <option>Orange</option>
+                <option>Banana</option>
+                <option>Guava</option>
+                <option>Litchi</option>
+                <option>Plum</option>
+                <option>Pine Apple</option>
+                <option>Black Berry</option>
+                <option>Mango</option>
+                <option>Strawberry</option>
+                <option>Grapes</option>
+                <option>Kiwi</option>
+                <option>Papaya</option>
+                <option>Pear</option>
+            </select>
+        </div>
+
+        <div class="food-item">
+            <div class="food-card">
+                <div class="food-name">
+                    <h2 style="margin: 0px 0 0 18px; position: relative; top:8px; color: #d30000;">Moong Dal (Green
+                        Gram)</h2>
+                    <img src="https://media.istockphoto.com/id/1310279351/photo/macro-close-up-of-organic-green-gram-or-whole-green-moong-dal-on-a-white-ceramic-soup-spoon.jpg?s=612x612&w=0&k=20&c=Egs5PIbNT46cLexABLLAwQ1mjp4cH6qGbYK3KYEkY3Q="
+                        alt="">
+                </div>
+                <div class="ayur">
+                    <div>
+                        <p><b>Rasa:</b> Sweet, Astringent</p>
+                    </div>
+                    <div>
+                        <p><b>Vipaka:</b> Sweet</p>
+                    </div>
+                    <div>
+                        <p><b>Virya:</b> Cooling</p>
+                    </div>
+                    <div>
+                        <p><b>Digestibility:</b> Easy</p>
+                    </div>
+                    <div style="width: 130%;">
+                        <p><b>Dosha Effects:</b> Vata: Pacifying | Pitta: Pacifying | Kapha: Pacifying</p>
+                    </div>
+                </div>
+                <div class="neu">
+                    <h3 style="color: #ca6f3e; margin-left: 7px;">Nutritional Data (per 100g):</h3>
+                    <ul>
+                        <li>Calories: 347</li>
+                        <li>Carbs: 63g</li>
+                        <li>Protein: 24g</li>
+                        <li>Fat: 1.2g</li>
+                        <li>Fiber: 8g</li>
+                        <li>Calcium: 132mg</li>
+                        <li>Iron: 6.7mg</li>
+                        <li>Magnesium: 189mg</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <div class="food-name">
+                    <h2 style="margin: 0px 0 0 18px; position: relative; top:8px; color: #d30000;">Brown Rice</h2>
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.Dw3f_rnJRM4uxJw3F-EPgAHaEY?pid=Api&P=0&h=220" alt="">
+                </div>
+                <div class="ayur">
+                    <div>
+                        <p><b>Rasa:</b> Sweet</p>
+                    </div>
+                    <div>
+                        <p><b>Vipaka:</b> Sweet</p>
+                    </div>
+                    <div>
+                        <p><b>Virya:</b> Cooling</p>
+                    </div>
+                    <div>
+                        <p><b>Digestibility:</b> Moderate</p>
+                    </div>
+                    <div style="width: 130%;">
+                        <p><b>Dosha Effects:</b> Vata: Pacifying | Pitta: Pacifying | Kapha: increasing</p>
+                    </div>
+                </div>
+                <div class="neu">
+                    <h3 style="color: #ca6f3e; margin-left: 7px;">Nutritional Data (per 100g):</h3>
+                    <ul>
+                        <li>Calories: 111</li>
+                        <li>Carbs: 23g</li>
+                        <li>Protein: 2.6g</li>
+                        <li>Fat: 0.9g</li>
+                        <li>Fiber: 1.8g</li>
+                        <li>Calcium: 10mg</li>
+                        <li>Iron: 0.4mg</li>
+                        <li>Magnesium: 43mg</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <div class="food-name">
+                    <h2 style="margin: 0px 0 0 18px; position: relative; top:8px; color: #d30000;"> Spinach (Palak)</h2>
+                    <img src="https://www.tastingtable.com/img/gallery/12-best-substitutes-for-spinach/l-intro-1668722550.jpg"
+                        alt="">
+                </div>
+                <div class="ayur">
+                    <div>
+                        <p><b>Rasa:</b> Sweet, Astringent</p>
+                    </div>
+                    <div>
+                        <p><b>Vipaka:</b> Sweet</p>
+                    </div>
+                    <div>
+                        <p><b>Virya:</b> Cooling</p>
+                    </div>
+                    <div>
+                        <p><b>Digestibility:</b> Easy</p>
+                    </div>
+                    <div style="width: 130%;">
+                        <p><b>Dosha Effects:</b> Vata: Pacifying | Pitta: Pacifying | Kapha: increasing</p>
+                    </div>
+                </div>
+                <div class="neu">
+                    <h3 style="color: #ca6f3e; margin-left: 7px;">Nutritional Data (per 100g):</h3>
+                    <ul>
+                        <li><b>Calories:</b>23</li>
+                        <li><b>Carbs:</b> 3.6g</li>
+                        <li><b>Protein:</b> 2.9g</li>
+                        <li><b>Fat:</b>0.4g</li>
+                        <li><b>Fiber:</b> 2.2g</li>
+                        <li><b>Calcium:</b>99mg</li>
+                        <li><b>Iron:</b>2.7mg</li>
+                        <li><b>Magnesium:</b>79mg</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <div class="food-name">
+                    <h2 style="margin: 0px 0 0 18px; position: relative; top:8px; color: #d30000;">Curd (Dahi)</h2>
+                    <img src="https://images.hindustantimes.com/img/2022/12/06/1600x900/dahi_1654357494111_1670328535117_1670328535117.jpg"
+                        alt="">
+                </div>
+                <div class="ayur">
+                    <div>
+                        <p><b>Rasa:</b> Sweet, Sour</p>
+                    </div>
+                    <div>
+                        <p><b>Vipaka:</b> Sour</p>
+                    </div>
+                    <div>
+                        <p><b>Virya:</b> Cooling</p>
+                    </div>
+                    <div>
+                        <p><b>Digestibility:</b> Moderate</p>
+                    </div>
+                    <div style="width: 130%;">
+                        <p><b>Dosha Effects:</b> Vata: Pacifying | Pitta: Pacifying | Kapha: increasing</p>
+                    </div>
+                </div>
+                <div class="neu">
+                    <h3 style="color: #ca6f3e; margin-left: 7px;">Nutritional Data (per 100g):</h3>
+                    <ul>
+                        <li><b>Calories:</b>98</li>
+                        <li><b>Carbs:</b> 3.4g</li>
+                        <li><b>Protein:</b> 11g</li>
+                        <li><b>Fat:</b>4.3g</li>
+                        <li><b>Fiber:</b> 0g</li>
+                        <li><b>Calcium:</b>83mg</li>
+                        <li><b>Iron:</b>0.1mg</li>
+                        <li><b>Magnesium:</b>11mg</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <div class="food-name">
+                    <h2 style="margin: 0px 0 0 18px; position: relative; top:8px; color: #d30000;">Carrot (Gajar)</h2>
+                    <img src="https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2018/4/25/3/shutterstock_440493100_5-second-Studio_carrots.jpg.rend.hgtvcom.1280.853.suffix/1524688181811.jpeg"
+                        alt="">
+                </div>
+                <div class="ayur">
+                    <div>
+                        <p><b>Rasa:</b> Sweet, Astringent</p>
+                    </div>
+                    <div>
+                        <p><b>Vipaka:</b> Sweet</p>
+                    </div>
+                    <div>
+                        <p><b>Virya:</b> Cooling</p>
+                    </div>
+                    <div>
+                        <p><b>Digestibility:</b> Easy</p>
+                    </div>
+                    <div style="width: 130%;">
+                        <p><b>Dosha Effects:</b> Vata: Pacifying | Pitta: Pacifying | Kapha: increasing</p>
+                    </div>
+                </div>
+                <div class="neu">
+                    <h3 style="color: #ca6f3e; margin-left: 7px;">Nutritional Data (per 100g):</h3>
+                    <ul>
+                        <li><b>Calories:</b>41</li>
+                        <li><b>Carbs:</b> 9.6g</li>
+                        <li><b>Protein:</b> 0.9g</li>
+                        <li><b>Fat:</b>0.2g</li>
+                        <li><b>Fiber:</b> 2.8g</li>
+                        <li><b>Calcium:</b>33mg</li>
+                        <li><b>Iron:</b>0.3mg</li>
+                        <li><b>Magnesium:</b>12mg</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <div class="food-name">
+                    <h2 style="margin: 0px 0 0 18px; position: relative; top:8px; color: #d30000;">Cucumber (Kheera)
+                    </h2>
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.E0MPRvt4Wz5djs7ESPBmJwAAAA?pid=Api&P=0&h=220" alt="">
+                </div>
+                <div class="ayur">
+                    <div>
+                        <p><b>Rasa:</b> Sweet</p>
+                    </div>
+                    <div>
+                        <p><b>Vipaka:</b> Sweet</p>
+                    </div>
+                    <div>
+                        <p><b>Virya:</b> Cooling</p>
+                    </div>
+                    <div>
+                        <p><b>Digestibility:</b> Easy</p>
+                    </div>
+                    <div style="width: 130%;">
+                        <p><b>Dosha Effects:</b> Vata: Pacifying | Pitta: Pacifying | Kapha: Increasing</p>
+                    </div>
+                </div>
+                <div class="neu">
+                    <h3 style="color: #ca6f3e; margin-left: 7px;">Nutritional Data (per 100g):</h3>
+                    <ul>
+                        <li><b>Calories:</b>15</li>
+                        <li><b>Carbs:</b> 3.6g</li>
+                        <li><b>Protein:</b> 0.7g</li>
+                        <li><b>Fat:</b>0.1g</li>
+                        <li><b>Fiber:</b> 0.5g</li>
+                        <li><b>Calcium:</b>16mg</li>
+                        <li><b>Iron:</b>0.3mg</li>
+                        <li><b>Magnesium:</b>13mg</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <div class="food-name">
+                    <h2 style="margin: 0px 0 0 18px; position: relative; top:8px; color: #d30000;">Toor Dal (Arhar Dal)
+                    </h2>
+                    <img src="https://media.istockphoto.com/photos/toor-dal-or-arhar-dal-or-raw-pulses-picture-id811955850?k=20&m=811955850&s=612x612&w=0&h=t-RWKGrYGdJCqp3yCviRiJTH13ZRPvZdm3aALDwqTf4=" alt="">
+                </div>
+                <div class="ayur">
+                    <div>
+                        <p><b>Rasa:</b> Sweet, Astringent</p>
+                    </div>
+                    <div>
+                        <p><b>Vipaka:</b> Sweet</p>
+                    </div>
+                    <div>
+                        <p><b>Virya:</b> Heating</p>
+                    </div>
+                    <div>
+                        <p><b>Digestibility:</b> Moderate</p>
+                    </div>
+                    <div style="width: 130%;">
+                        <p><b>Dosha Effects:</b> Vata: Pacifying | Pitta: Pacifying | Kapha: Incresing</p>
+                    </div>
+                </div>
+                <div class="neu">
+                    <h3 style="color: #ca6f3e; margin-left: 7px;">Nutritional Data (per 100g):</h3>
+                    <ul>
+                        <li><b>Calories:</b>335</li>
+                        <li><b>Carbs:</b> 62g</li>
+                        <li><b>Protein:</b> 22g</li>
+                        <li><b>Fat:</b>1.5g</li>
+                        <li><b>Fiber:</b> 8g</li>
+                        <li><b>Calcium:</b>73mg</li>
+                        <li><b>Iron:</b>5.8mg</li>
+                        <li><b>Magnesium:</b>110mg</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <div class="food-name">
+                    <h2 style="margin: 0px 0 0 18px; position: relative; top:8px; color: #d30000;">Apple(Seb)</h2>
+                    <img src="https://www.fruitionseeds.com/wp-content/uploads/social-apple-querina.jpg" alt="">
+                </div>
+                <div class="ayur">
+                    <div>
+                        <p><b>Rasa:</b> Sweet, Astringent</p>
+                    </div>
+                    <div>
+                        <p><b>Vipaka:</b> Sweet</p>
+                    </div>
+                    <div>
+                        <p><b>Virya:</b> Cooling</p>
+                    </div>
+                    <div>
+                        <p><b>Digestibility:</b> Easy</p>
+                    </div>
+                    <div style="width: 130%;">
+                        <p><b>Dosha Effects:</b> Vata: Pacifying | Pitta: Pacifying | Kapha: Increasing</p>
+                    </div>
+                </div>
+                <div class="neu">
+                    <h3 style="color: #ca6f3e; margin-left: 7px;">Nutritional Data (per 100g):</h3>
+                    <ul>
+                        <li><b>Calories:</b>52</li>
+                        <li><b>Carbs:</b> 14g</li>
+                        <li><b>Protein:</b> 0.3g</li>
+                        <li><b>Fat:</b>0.2g</li>
+                        <li><b>Fiber:</b> 2.4g</li>
+                        <li><b>Calcium:</b>6mg</li>
+                        <li><b>Iron:</b>0.1mg</li>
+                        <li><b>Magnesium:</b>5mg</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="food-card">
+                <div class="food-name">
+                    <h2 style="margin: 0px 0 0 18px; position: relative; top:8px; color: #d30000;"> Wheat (Gehu)</h2>
+                    <img src="https://kj1bcdn.b-cdn.net/media/81142/wheat.jpg" alt="">
+                </div>
+                <div class="ayur">
+                    <div>
+                        <p><b>Rasa:</b> Sweet</p>
+                    </div>
+                    <div>
+                        <p><b>Vipaka:</b> Sweet</p>
+                    </div>
+                    <div>
+                        <p><b>Virya:</b> Cooling</p>
+                    </div>
+                    <div>
+                        <p><b>Digestibility:</b> Moderate</p>
+                    </div>
+                    <div style="width: 130%;">
+                        <p><b>Dosha Effects:</b> Vata: Pacifying | Pitta: Increasing | Kapha: Increasing</p>
+                    </div>
+                </div>
+                <div class="neu">
+                    <h3 style="color: #ca6f3e; margin-left: 7px;">Nutritional Data (per 100g):</h3>
+                    <ul>
+                        <li><b>Calories:</b>327</li>
+                        <li><b>Carbs:</b> 71g</li>
+                        <li><b>Protein:</b> 12g</li>
+                        <li><b>Fat:</b>1.5g</li>
+                        <li><b>Fiber:</b> 12g</li>
+                        <li><b>Calcium:</b>30mg</li>
+                        <li><b>Iron:</b>3.6mg</li>
+                        <li><b>Magnesium:</b>138mg</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <div class="food-name">
+                    <h2 style="margin: 0px 0 0 18px; position: relative; top:8px; color: #d30000;">Bottle Gourd (Lauki)
+                    </h2>
+                    <img src="https://greenseeds.net/wp-content/uploads/2014/04/BOTTLE-GOURD-F1-612-1.jpg"
+                        alt="">
+                </div>
+                <div class="ayur">
+                    <div>
+                        <p><b>Rasa:</b> Sweet</p>
+                    </div>
+                    <div>
+                        <p><b>Vipaka:</b> Sweet</p>
+                    </div>
+                    <div>
+                        <p><b>Virya:</b> Cooling</p>
+                    </div>
+                    <div>
+                        <p><b>Digestibility:</b> Easy</p>
+                    </div>
+                    <div style="width: 130%;">
+                        <p><b>Dosha Effects:</b> Vata: Pacifying | Pitta: Pacifying | Kapha: Pacifying</p>
+                    </div>
+                </div>
+                <div class="neu">
+                    <h3 style="color: #ca6f3e; margin-left: 7px;">Nutritional Data (per 100g):</h3>
+                    <ul>
+                        <li><b>Calories:</b>14</li>
+                        <li><b>Carbs:</b> 3.4g</li>
+                        <li><b>Protein:</b> 0.6g</li>
+                        <li><b>Fat:</b>0.1g</li>
+                        <li><b>Fiber:</b> 0.5g</li>
+                        <li><b>Calcium:</b>26mg</li>
+                        <li><b>Iron:</b>0.2mg</li>
+                        <li><b>Magnesium:</b>11mg</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <div class="food-name">
+                    <h2 style="margin: 0px 0 0 18px; position: relative; top:8px; color: #d30000;"> Turmeric (Haldi)
+                    </h2>
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.MWToh6WLNPbGNyDkq9eaMwHaDt?pid=Api&P=0&h=220" alt="">
+                </div>
+                <div class="ayur">
+                    <div>
+                        <p><b>Rasa:</b>Bitter, Pungent</p>
+                    </div>
+                    <div>
+                        <p><b>Vipaka:</b>Pungent</p>
+                    </div>
+                    <div>
+                        <p><b>Virya:</b> Heating</p>
+                    </div>
+                    <div>
+                        <p><b>Digestibility:</b> Easy</p>
+                    </div>
+                    <div style="width: 130%;">
+                        <p><b>Dosha Effects:</b> Vata: Pacifying | Pitta: Increasing | Kapha: Pacifying</p>
+                    </div>
+                </div>
+                <div class="neu">
+                    <h3 style="color: #ca6f3e; margin-left: 7px;">Nutritional Data (per 100g):</h3>
+                    <ul>
+                        <li><b>Calories:</b>312</li>
+                        <li><b>Carbs:</b> 67g</li>
+                        <li><b>Protein:</b> 9.7g</li>
+                        <li><b>Fat:</b>3.2g</li>
+                        <li><b>Fiber:</b> 22g</li>
+                        <li><b>Calcium:</b>168mg</li>
+                        <li><b>Iron:</b>55mg</li>
+                        <li><b>Magnesium:</b>208mg</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <div class="food-name">
+                    <h2 style="margin: 0px 0 0 18px; position: relative; top:8px; color: #d30000;">Honey (Madhu)</h2>
+                    <img src="https://therecipecritic.com/wp-content/uploads/2023/01/hothoney-750x1000.jpg" alt="">
+                </div>
+                <div class="ayur">
+                    <div>
+                        <p><b>Rasa:</b> Sweet, Astringent</p>
+                    </div>
+                    <div>
+                        <p><b>Vipaka:</b> Sweet</p>
+                    </div>
+                    <div>
+                        <p><b>Virya:</b> Heating</p>
+                    </div>
+                    <div>
+                        <p><b>Digestibility:</b> Easy</p>
+                    </div>
+                    <div style="width: 130%;">
+                        <p><b>Dosha Effects:</b> Vata: Pacifying | Pitta: Increasing | Kapha: Pacifying</p>
+                    </div>
+                </div>
+                <div class="neu">
+                    <h3 style="color: #ca6f3e; margin-left: 7px;">Nutritional Data (per 100g):</h3>
+                    <ul>
+                        <li><b>Calories:</b>304</li>
+                        <li><b>Carbs:</b> 82g</li>
+                        <li><b>Protein:</b> 0.3g</li>
+                        <li><b>Fat:</b>0g</li>
+                        <li><b>Fiber:</b> 0.2g</li>
+                        <li><b>Calcium:</b>6mg</li>
+                        <li><b>Iron:</b>0.4mg</li>
+                        <li><b>Magnesium:</b>2mg</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <%-include("includes/footer.ejs")%>
+
+    <script src="/landingPage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ayurvedic Doctor Appointment Cards</title>
+  <style>
+    :root{
+      --card-bg: #ffffff;
+      --accent: #2b8aef;
+      --muted: #6b7280;
+      --shadow: 0 8px 24px rgba(16,24,40,0.08);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{
+      min-height:100vh;
+      margin:0;
+      padding:32px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:20px;
+      background: linear-gradient(180deg,#f3f6fb 0%, #eef2f7 100%);
+    }
+
+    .card{
+      width:250px;
+      background:var(--card-bg);
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      padding:14px;
+      display:grid;
+      gap:8px;
+      align-items:start;
+      transition: transform 0.2s ease;
+      height: 257px;
+    }
+    .card:hover{transform:translateY(-4px)}
+
+    .top{text-align:center}
+    .avatar{
+      width:80px;
+      height:80px;
+      border-radius:50%;
+      object-fit:cover;
+      box-shadow:0 4px 14px rgba(43,138,239,0.12);
+    }
+    .info h3{margin:6px 0 0;font-size:16px;color:#0f172a}
+    .info p{margin:2px 0;font-size:12px;color:var(--muted)}
+    .chip{
+      display:inline-block;
+      background:#f1f5f9;
+      padding:2px 6px;
+      border-radius:8px;
+      font-size:11px;
+      margin:4px 2px;
+      color:#334155;
+    }
+
+    .actions{display:flex;justify-content:space-between;margin-top:6px}
+    button{cursor:pointer;border:0;padding:6px 10px;border-radius:8px;font-weight:600;font-size:12px}
+    .btn-appoint{background:var(--accent);color:white}
+    .btn-details{background:#eef2ff;color:var(--accent)}
+
+    /* Modal */
+    .modal-backdrop{
+      position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(10,14,20,0.36);padding:24px;z-index:99
+    }
+    .modal{
+      width:100%;max-width:460px;background:white;border-radius:12px;padding:16px;box-shadow:0 20px 40px rgba(2,6,23,0.2);
+    }
+    .modal h2{margin:0 0 8px;font-size:18px}
+    .modal label{font-size:13px;color:#334155}
+    .modal input,.modal select,.modal textarea{width:100%;padding:8px;border-radius:6px;border:1px solid #e6e9ef;font-size:13px}
+    .modal textarea{resize:vertical;min-height:60px}
+    .modal .actions{justify-content:flex-end;margin-top:10px}
+  </style>
+</head>
+<body>
+  <!-- Doctor Cards -->
+  <div class="card" data-doctor="Dr. Kavita Sharma">
+    <div class="top">
+      <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Doctor" class="avatar">
+      <div class="info">
+        <h3>Dr. Kavita Sharma</h3>
+        <p>BAMS, MD (Ayurveda)</p>
+        <span class="chip">Dosha: Vata</span>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--muted)">Specialist in Vata balancing therapies.</p>
+    <div class="actions">
+      <button class="btn-details">Details</button>
+      <button class="btn-appoint">Appoint</button>
+    </div>
+  </div>
+
+  <div class="card" data-doctor="Dr. Rajiv Nair">
+    <div class="top">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Doctor" class="avatar">
+      <div class="info">
+        <h3>Dr. Rajiv Nair</h3>
+        <p>BAMS, PhD Ayurveda</p>
+        <span class="chip">Dosha: Pitta</span>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--muted)">Expert in Pitta-related disorders.</p>
+    <div class="actions">
+      <button class="btn-details">Details</button>
+      <button class="btn-appoint">Appoint</button>
+    </div>
+  </div>
+
+  <div class="card" data-doctor="Dr. Meera Joshi">
+    <div class="top">
+      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Doctor" class="avatar">
+      <div class="info">
+        <h3>Dr. Meera Joshi</h3>
+        <p>BAMS, Ayurveda Consultant</p>
+        <span class="chip">Dosha: Kapha</span>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--muted)">Focused on Kapha treatments.</p>
+    <div class="actions">
+      <button class="btn-details">Details</button>
+      <button class="btn-appoint">Appoint</button>
+    </div>
+  </div>
+
+  <div class="card" data-doctor="Dr. Arun Mishra">
+    <div class="top">
+      <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Doctor" class="avatar">
+      <div class="info">
+        <h3>Dr. Arun Mishra</h3>
+        <p>BAMS, Panchakarma Specialist</p>
+        <span class="chip">Dosha: Pitta</span>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--muted)">Offers Panchakarma detox.</p>
+    <div class="actions">
+      <button class="btn-details">Details</button>
+      <button class="btn-appoint">Appoint</button>
+    </div>
+  </div>
+    <div class="card" data-doctor="Dr. Kavita Sharma">
+    <div class="top">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnVjU2R6bci4-fhX6YIHN24kBfg59PPmsA-A&s" alt="Doctor" class="avatar">
+      <div class="info">
+        <h3>Dr. Kavita Sharma</h3>
+        <p>BAMS, MD (Ayurveda)</p>
+        <span class="chip">Dosha: Kapha</span>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--muted)">Specialist in Vata balancing therapies.</p>
+    <div class="actions">
+      <button class="btn-details">Details</button>
+      <button class="btn-appoint">Appoint</button>
+    </div>
+  </div>
+    <div class="card" data-doctor="Dr. Kavita Sharma">
+    <div class="top">
+      <img src="https://img.freepik.com/free-photo/female-doctor-hospital-with-stethoscope_23-2148827776.jpg?semt=ais_hybrid&w=740&q=80" alt="Doctor" class="avatar">
+      <div class="info">
+        <h3>Dr. Kavita Sharma</h3>
+        <p>BAMS, MD (Ayurveda)</p>
+        <span class="chip">Dosha: Vata</span>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--muted)">Specialist in Vata balancing therapies.</p>
+    <div class="actions">
+      <button class="btn-details">Details</button>
+      <button class="btn-appoint">Appoint</button>
+    </div>
+  </div>
+    <div class="card" data-doctor="Dr. Kavita Sharma">
+    <div class="top">
+      <img src="https://t4.ftcdn.net/jpg/03/20/74/45/360_F_320744517_TaGkT7aRlqqWdfGUuzRKDABtFEoN5CiO.jpg" alt="Doctor" class="avatar">
+      <div class="info">
+        <h3>Dr. Kavita Sharma</h3>
+        <p>BAMS, MD (Ayurveda)</p>
+        <span class="chip">Dosha: Kapha</span>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--muted)">Specialist in Vata balancing therapies.</p>
+    <div class="actions">
+      <button class="btn-details">Details</button>
+      <button class="btn-appoint">Appoint</button>
+    </div>
+  </div>
+  
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="modal">
+    <div class="modal">
+      <h2 id="modalTitle">Book Appointment</h2>
+      <form id="appointForm">
+        <label for="patientName">Patient Name</label>
+        <input id="patientName" name="patientName" required>
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" required>
+        <label for="date">Preferred Date & Time</label>
+        <input id="date" name="date" type="datetime-local" required>
+        <label for="reason">Reason</label>
+        <textarea id="reason" name="reason"></textarea>
+        <div class="actions">
+          <button type="button" id="cancelBtn">Cancel</button>
+          <button type="submit" style="background:var(--accent);color:white">Confirm</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    const appointButtons = document.querySelectorAll('.btn-appoint');
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modalTitle');
+    const cancelBtn = document.getElementById('cancelBtn');
+    const form = document.getElementById('appointForm');
+
+    appointButtons.forEach(btn => {
+      btn.addEventListener('click', e => {
+        const doctorName = e.target.closest('.card').dataset.doctor;
+        modalTitle.textContent = `Book Appointment with ${doctorName}`;
+        modal.style.display = 'flex';
+      });
+    });
+
+    cancelBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      form.reset();
+    });
+
+    modal.addEventListener('click', e => {
+      if(e.target === modal){
+        modal.style.display = 'none';
+        form.reset();
+      }
+    });
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Appointment requested!');
+      modal.style.display = 'none';
+      form.reset();
+    });
+  </script>
+</body>
+</html>

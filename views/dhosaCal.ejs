@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dosha (Prakriti) Calculator — Ayurve</title>
+  <style>
+    :root{--bg:#f7f9fb;--card:#fff;--accent:#1070ca;--muted:#657786;--dominant:#ffd27a}
+    *{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    body{margin:0;background:var(--bg);color:#122;}
+    .wrap{max-width:900px;margin:36px auto;padding:20px}
+    .card{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 6px 20px rgba(15,15,15,0.06)}
+    h1{margin:0 0 8px;font-size:20px}
+    p.lead{margin:0 0 18px;color:var(--muted)}
+    form .q{padding:12px 0;border-bottom:1px dashed #eee;display:flex;align-items:center;gap:12px}
+    .q:last-of-type{border-bottom:0}
+    .q p{margin:0;flex:1}
+    .options{display:flex;gap:8px}
+    .options label{display:inline-flex;align-items:center;gap:6px;background:#fbfdff;border:1px solid #e6eef9;padding:8px 10px;border-radius:8px;cursor:pointer}
+    .options input{accent-color:var(--accent)}
+    .controls{display:flex;gap:8px;margin-top:16px}
+    button{background:var(--accent);color:#fff;border:0;padding:10px 14px;border-radius:8px;cursor:pointer}
+    button.ghost{background:transparent;color:var(--accent);border:1px solid #d7e9ff}
+    .result{margin-top:18px;padding:14px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff)}
+    .bars{display:flex;gap:10px;margin-top:10px}
+    .bar{flex:1;padding:8px;border-radius:8px;background:#f0f6fb;transition:box-shadow 250ms ease, transform 250ms ease}
+    .bar.dominant{box-shadow:0 8px 24px rgba(16,112,202,0.12);transform:translateY(-6px);background:linear-gradient(180deg,#fff8e6,#fffefb);border:2px solid #ffd27a}
+    .bar .label{font-size:13px;color:var(--muted);display:flex;justify-content:space-between}
+    .bar .meter{height:14px;background:#e6f0fb;border-radius:8px;margin-top:8px;overflow:hidden}
+    .bar .fill{height:100%;width:0;background:linear-gradient(90deg,#1070ca,#3fb3ff);transition:width 700ms ease}
+    .recommend{margin-top:12px;color:#123}
+    .diet-chart{margin-top:12px;padding:12px;border-radius:8px;background:#fffefc;border:1px solid #fff2d9}
+    .diet-chart h4{margin:0 0 8px}
+    .diet-chart ul{margin:0 0 8px 18px}
+    @media (max-width:640px){.options{flex-direction:column}.bars{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Dosha (Prakriti) Calculator</h1>
+      <p class="lead">Answer briefly — results will show approximate Vata / Pitta / Kapha balance in % and a simple diet chart based on the predominant dosha.</p>
+
+      <form id="doshaForm">
+        <!-- Questions: each option attaches score vector data-v="v,p,k" -->
+
+        <div class="q">
+          <p>1. Shariir (body) ka sannrachna kaisa hai? (Body frame)</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="v:2,p:0,k:0" required> Slim / thin</label>
+            <label><input type="radio" name="q1" value="v:0,p:2,k:0"> Medium / muscular</label>
+            <label><input type="radio" name="q1" value="v:0,p:0,k:2"> Sturdy / heavy</label>
+          </div>
+        </div>
+
+        <div class="q">
+          <p>2. Energy level kaisa rehta hai?</p>
+          <div class="options">
+            <label><input type="radio" name="q2" value="v:2,p:0,k:0"> Irregular energy, fast exhaustion</label>
+            <label><input type="radio" name="q2" value="v:0,p:2,k:0"> High, focused energy</label>
+            <label><input type="radio" name="q2" value="v:0,p:0,k:2"> Slow but steady</label>
+          </div>
+        </div>
+
+        <div class="q">
+          <p>3. Skin / hair type?</p>
+          <div class="options">
+            <label><input type="radio" name="q3" value="v:2,p:0,k:0"> Dry & rough</label>
+            <label><input type="radio" name="q3" value="v:0,p:2,k:0"> Oily / warm</label>
+            <label><input type="radio" name="q3" value="v:0,p:0,k:2"> Moist / smooth</label>
+          </div>
+        </div>
+
+        <div class="q">
+          <p>4. Appetite & digestion?</p>
+          <div class="options">
+            <label><input type="radio" name="q4" value="v:2,p:0,k:0"> Variable appetite</label>
+            <label><input type="radio" name="q4" value="v:0,p:2,k:0"> Strong appetite</label>
+            <label><input type="radio" name="q4" value="v:0,p:0,k:2"> Slow digestion</label>
+          </div>
+        </div>
+
+        <div class="q">
+          <p>5. Temperature preference?</p>
+          <div class="options">
+            <label><input type="radio" name="q5" value="v:2,p:0,k:0"> Prefer warm, dislike cold</label>
+            <label><input type="radio" name="q5" value="v:0,p:2,k:0"> Prefer cool, dislike heat</label>
+            <label><input type="radio" name="q5" value="v:0,p:0,k:2"> Prefer warmth and comfort</label>
+          </div>
+        </div>
+
+        <div class="q">
+          <p>6. Sleep pattern?</p>
+          <div class="options">
+            <label><input type="radio" name="q6" value="v:2,p:0,k:0"> Light & disturbed sleep</label>
+            <label><input type="radio" name="q6" value="v:0,p:2,k:0"> Moderate sleep</label>
+            <label><input type="radio" name="q6" value="v:0,p:0,k:2"> Deep & heavy sleep</label>
+          </div>
+        </div>
+
+        <div class="q">
+          <p>7. Mental patterns?</p>
+          <div class="options">
+            <label><input type="radio" name="q7" value="v:2,p:0,k:0"> Quick thinking, changeable mind</label>
+            <label><input type="radio" name="q7" value="v:0,p:2,k:0"> Intense, focused, decisive</label>
+            <label><input type="radio" name="q7" value="v:0,p:0,k:2"> Calm, steady, patient</label>
+          </div>
+        </div>
+
+        <div class="q">
+          <p>8. Body weight tendency?</p>
+          <div class="options">
+            <label><input type="radio" name="q8" value="v:2,p:0,k:0"> Hard to gain weight</label>
+            <label><input type="radio" name="q8" value="v:0,p:2,k:0"> Moderate, can fluctuate</label>
+            <label><input type="radio" name="q8" value="v:0,p:0,k:2"> Tend to gain weight easily</label>
+          </div>
+        </div>
+
+        <div class="q">
+          <p>9. Body temperature (usually)?</p>
+          <div class="options">
+            <label><input type="radio" name="q9" value="v:2,p:0,k:0"> Feel cold often</label>
+            <label><input type="radio" name="q9" value="v:0,p:2,k:0"> Feel warm / sweat easily</label>
+            <label><input type="radio" name="q9" value="v:0,p:0,k:2"> Even & steady temperature</label>
+          </div>
+        </div>
+
+        <div class="q">
+          <p>10. Body build / joints?</p>
+          <div class="options">
+            <label><input type="radio" name="q10" value="v:2,p:0,k:0"> Prominent joints, lanky</label>
+            <label><input type="radio" name="q10" value="v:0,p:2,k:0"> Medium structure</label>
+            <label><input type="radio" name="q10" value="v:0,p:0,k:2"> Strong bones, fleshy</label>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button type="submit">Calculate Dosha</button>
+          <button type="button" class="ghost" id="resetBtn">Reset</button>
+        </div>
+        <a href="http://localhost:8080/home" style="margin: 10px;">Goto Home</a>
+      </form>
+      
+
+      <div id="result" class="result" style="display:none">
+        <h3>Approximate Prakriti</h3>
+        <div class="bars">
+          <div class="bar" id="barVata">
+            <div class="label"><span>Vata</span><span id="vataVal">0%</span></div>
+            <div class="meter"><div id="vataFill" class="fill"></div></div>
+          </div>
+          <div class="bar" id="barPitta">
+            <div class="label"><span>Pitta</span><span id="pittaVal">0%</span></div>
+            <div class="meter"><div id="pittaFill" class="fill"></div></div>
+          </div>
+          <div class="bar" id="barKapha">
+            <div class="label"><span>Kapha</span><span id="kaphaVal">0%</span></div>
+            <div class="meter"><div id="kaphaFill" class="fill"></div></div>
+          </div>
+        </div>
+        <div class="recommend" id="recommend"></div>
+        <div class="diet-chart" id="dietChart" style="display:none"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('doshaForm');
+    const resultBox = document.getElementById('result');
+    const vataVal = document.getElementById('vataVal');
+    const pittaVal = document.getElementById('pittaVal');
+    const kaphaVal = document.getElementById('kaphaVal');
+    const vataFill = document.getElementById('vataFill');
+    const pittaFill = document.getElementById('pittaFill');
+    const kaphaFill = document.getElementById('kaphaFill');
+    const recommend = document.getElementById('recommend');
+    const dietChart = document.getElementById('dietChart');
+    const resetBtn = document.getElementById('resetBtn');
+    const barVata = document.getElementById('barVata');
+    const barPitta = document.getElementById('barPitta');
+    const barKapha = document.getElementById('barKapha');
+
+    function parseScore(val){
+      // val format: "v:2,p:0,k:0"
+      const parts = val.split(',');
+      const obj = {v:0,p:0,k:0};
+      parts.forEach(p=>{
+        const [k,raw] = p.split(':'); obj[k.trim()] = Number(raw);
+      });
+      return obj;
+    }
+
+    function clearDominant(){
+      barVata.classList.remove('dominant');
+      barPitta.classList.remove('dominant');
+      barKapha.classList.remove('dominant');
+    }
+
+    function generateDietFor(dosha){
+      // simple starter diet charts; you can expand as needed
+      const charts = {
+        vata: {
+          title: 'Vata-balancing Diet (sample)',
+          bullets: [
+            'Breakfast: Warm porridge (rice/oats) with ghee and cooked fruit',
+            'Mid-morning: Warm herbal tea (ginger + cinnamon) and soaked nuts',
+            'Lunch: Warm cooked khichdi with vegetables; use warming spices (turmeric, cumin)',
+            'Evening: Light soup or steamed veggies',
+            'Dinner: Warm cooked grains (rice/dal) with ghee; avoid raw salads at night',
+            'Lifestyle: Regular routine, oil massage (abhyanga), adequate sleep'
+          ]
+        },
+        pitta: {
+          title: 'Pitta-balancing Diet (sample)',
+          bullets: [
+            'Breakfast: Cooling smoothies or milk with cardamom',
+            'Mid-morning: Fresh fruits like apple/pear; avoid sour fruits',
+            'Lunch: Moderate portions of cooling grains (rice), plenty of greens',
+            'Evening: Cucumber salads, coconut water',
+            'Dinner: Light khichdi or steamed vegetables; avoid spicy and fried foods',
+            'Lifestyle: Avoid midday sun, practice calming breathing exercises'
+          ]
+        },
+        kapha: {
+          title: 'Kapha-balancing Diet (sample)',
+          bullets: [
+            'Breakfast: Warm spiced porridge (use ginger, black pepper)',
+            'Mid-morning: Light herbal tea; avoid dairy heavy snacks',
+            'Lunch: Lighter meals, plenty of bitter and astringent vegetables',
+            'Evening: Stir-fried vegetables, light soups',
+            'Dinner: Early and light dinner; avoid sweet and heavy foods',
+            'Lifestyle: Increase physical activity, dry brushing, avoid day sleeping'
+          ]
+        },
+        mixed: {
+          title: 'Mixed/Dual Prakriti (sample guidance)',
+          bullets: [
+            'Follow practitioner’s personalized plan',
+            'Prefer fresh, seasonal foods and moderate portions',
+            'Balance heating/cooling foods based on symptoms',
+            'Regular meal timings and gentle exercise'
+          ]
+        }
+      };
+
+      return charts[dosha] || charts['mixed'];
+    }
+
+    form.addEventListener('submit', e=>{
+      e.preventDefault();
+      // collect radios
+      const data = new FormData(form);
+      let totals = {v:0,p:0,k:0};
+      for (let [key, val] of data.entries()){
+        const sc = parseScore(val);
+        totals.v += sc.v; totals.p += sc.p; totals.k += sc.k;
+      }
+      const sum = totals.v + totals.p + totals.k || 1;
+      const vPct = Math.round((totals.v / sum)*100);
+      const pPct = Math.round((totals.p / sum)*100);
+      const kPct = Math.round((totals.k / sum)*100);
+
+      // update UI
+      vataVal.textContent = vPct + '%';
+      pittaVal.textContent = pPct + '%';
+      kaphaVal.textContent = kPct + '%';
+      vataFill.style.width = vPct + '%';
+      pittaFill.style.width = pPct + '%';
+      kaphaFill.style.width = kPct + '%';
+
+      // determine dominant and highlight
+      clearDominant();
+      const highest = Math.max(vPct,pPct,kPct);
+      const topCount = [vPct,pPct,kPct].filter(x=>x===highest).length;
+      let doshaKey = 'mixed';
+      let text = '';
+
+      if (topCount===1){
+        if (vPct===highest){ barVata.classList.add('dominant'); doshaKey='vata'; text = '<strong>Predominant Dosha: Vata.</strong> Recommend warm, grounding foods; regular meals; oil massage (abhyanga).'; }
+        else if (pPct===highest){ barPitta.classList.add('dominant'); doshaKey='pitta'; text = '<strong>Predominant Dosha: Pitta.</strong> Recommend cooling, non-spicy foods; avoid excess heat and stress.'; }
+        else { barKapha.classList.add('dominant'); doshaKey='kapha'; text = '<strong>Predominant Dosha: Kapha.</strong> Recommend light, stimulating foods; increase activity and reduce heavy/sweet intake.'; }
+      } else {
+        // mixed/dual prakriti
+        text = '<strong>Dual/Mixed Prakriti.</strong> Two or more doshas are close — personalize further with practitioner.';
+        // highlight all tied bars
+        if (vPct===highest) barVata.classList.add('dominant');
+        if (pPct===highest) barPitta.classList.add('dominant');
+        if (kPct===highest) barKapha.classList.add('dominant');
+        doshaKey = 'mixed';
+      }
+
+      recommend.innerHTML = text;
+
+      // generate diet chart based on doshaKey
+      const chart = generateDietFor(doshaKey);
+      dietChart.style.display = 'block';
+      dietChart.innerHTML = `<h4>${chart.title}</h4><ul>${chart.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>`;
+
+      resultBox.style.display = 'block';
+      resultBox.scrollIntoView({behavior:'smooth'});
+    });
+
+    resetBtn.addEventListener('click', ()=>{
+      form.reset(); resultBox.style.display = 'none'; clearDominant(); dietChart.style.display='none'; recommend.innerHTML=''; vataFill.style.width='0'; pittaFill.style.width='0'; kaphaFill.style.width='0'; vataVal.textContent='0%'; pittaVal.textContent='0%'; kaphaVal.textContent='0%';
+    });
+  </script>
+</body>
+</html>

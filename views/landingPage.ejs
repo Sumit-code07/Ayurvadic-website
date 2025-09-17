@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayurvada</title>
+    <link rel="stylesheet" href="/landingPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/image/logo.png">
+            <h4 style="color: #196c7a;">Veda</h4><h4 style="color: #ff6a02;">care</h4>
+        </div>
+        <div class="tab">
+            <ul type="none">
+                <li><a href="http://localhost:8080/home">Home</a></li>
+                <li><a href="http://localhost:8080/doctor">Doctors</a></li>
+                <li><a href="http://localhost:8080/dhosa">Dosha calculatar</a></li>
+                <li><a href="#deit">Diet Planner</a></li>
+            </ul>
+        </div>
+        <div class="more"><i class="fa-solid fa-bars"></i></div>
+    </header>
+    <div class="nav-bar">
+        <div class="Close"><i class="fa-solid fa-xmark"></i></div>
+        <div class="user-detail">
+            <div class="user-logo"></div>
+            <div>
+                <h2>Sumit Kumar</h2>
+                <p>Welcome! You are in bar page</p>
+            </div>
+        </div>
+        <div class="nav-bar-option">
+            <button type="button" onclick="window.location.href='http://localhost:8080/allfood';">All Foods</button>
+            <button type="button" onclick="window.location.href='http://localhost:8080/ayurFood';">Ayurvada view</button>
+            <button type="button" onclick="window.location.href='http://localhost:8080/prot';">Nutrients view</button>
+            <button type="button" onclick="window.location.href='http://localhost:8080/data';">Calculate Diet</button>
+        </div>
+    </div>
+    <div class="slide-img">
+        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="SlideImage">
+    </div>
+    <div class="navigate">
+        <a style="color:black" href="http://localhost:8080/allfood">
+            <div class="nav-card">
+            <div class="nav-icon"><i class="fa-solid fa-bowl-food"></i></div>
+            <div class="nav-text">
+                <h3>All Foods</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        </a>
+        
+        <a style="color:black" href="http://localhost:8080/ayurFood">
+            <div class="nav-card">
+            <div class="nav-icon"><i class="fa-solid fa-leaf"></i></div>
+            <div class="nav-text">
+                <h3>Ayruvedic View</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        </a>
+        <a style="color:black" href="http://localhost:8080/prot">
+            <div class="nav-card">
+            <div class="nav-icon"><i class="fa-solid fa-utensils"></i></div>
+            <div class="nav-text">
+                <h3>Nutritional View</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        </a>
+        
+        <a style="color:black" href="http://localhost:8080/data">
+            <div class="nav-card">
+            <div class="nav-icon"><i class="fa-brands fa-nutritionix"></i></div>
+            <div class="nav-text">
+                <h3>Calculate Diet</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        </a>
+        
+    </div>
+    <div class="diet_plan" id="deit">
+        <form action="/server" method="post">
+            <div>
+                <input type="text" name="age" placeholder="Enter your Age">
+                <input type="text" name="gender" placeholder="Gender">
+            </div>
+            <div>
+                <input type="text" name="height" placeholder="height">
+                <input type="text" name="weight" placeholder="weight">
+            </div>
+            <div>
+                <input type="text" name="medical_issue" placeholder="Any medical issue">
+            </div>
+            <div>
+                <button type="submit">Get Deit Chart</button>
+            </div>
+        </form>
+        <img src="/image/list.svg" alt="" >
+        <div class="formstyle"></div>
+    </div>
+    <%-include("includes/footer.ejs")%>
+
+    <script src="/landingPage.js"></script>
+</body>
+</html>

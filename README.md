@@ -9,4 +9,66 @@ https://github.com/user-attachments/assets/c24c200e-02e1-49bf-8082-d06541fc72a6
 
 
 
-In this, users can know their natural constitution such as Dosha and also get a personalized diet plan according to their condition.
+🌿 Ayurveda Food Monitoring System
+
+A web-based application built using Node.js, Express, and EJS that helps users:
+
+Calculate food protein values
+
+Identify their Ayurvedic dosha (Vata, Pitta, Kapha)
+
+Book an Ayurveda doctor appointment
+
+This project combines traditional Ayurvedic concepts with modern nutritional tracking.
+
+✨ Features
+🥗 1. Food Protein Calculator
+
+Users can enter their daily foods
+
+The system shows an approximate protein content
+
+Helps in basic nutrition tracking
+
+🧘 2. Dosha Identification Form
+
+Users answer a set of simple questions
+
+The system determines their Vata / Pitta / Kapha balance
+
+Useful for personalized health suggestions
+
+👨‍⚕️ 3. Doctor Appointment
+
+Users can book appointments with Ayurvedic doctors
+
+Simple form-based appointment system
+
+🛠️ Tech Stack
+
+Node.js
+
+Express.js
+
+EJS (Embedded JavaScript Templates)
+
+Google Generative AI (@google/generative-ai)
+
+🚀 How to Run the Project Locally
+
+Follow these steps:
+
+1️⃣ Clone the repository
+git clone https://github.com/your-username/your-repository-name.git
+
+2️⃣ Navigate into the folder
+cd your-repository-name
+
+3️⃣ Install all dependencies
+npm install
+
+4️⃣ Start the server
+node index.js
+
+5️⃣ Open in browser
+http://localhost:3000

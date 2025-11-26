@@ -12,6 +12,7 @@ Book an Ayurveda doctor appointment
 This project combines traditional Ayurvedic concepts with modern nutritional tracking.
 
 **✨ Features**
+
 🥗 1. Food Protein Calculator
 
 Users can enter their daily foods
@@ -72,6 +73,12 @@ node index.js
 ```js
 http://localhost:3000
 ```
+
+**🔑 Google Generative AI Setup (Optional)**
+
+If You want to check Google AI, set this environment variable:
+
+GOOGLE_API_KEY=your_api_key_here
 
 
 https://github.com/user-attachments/assets/c24c200e-02e1-49bf-8082-d06541fc72a6

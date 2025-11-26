@@ -1,5 +1,5 @@
 
-🌿 Ayurveda Food Monitoring System
+#🌿 Ayurveda Food Monitoring System
 
 A web-based application built using Node.js, Express, and EJS that helps users:
 
@@ -11,7 +11,7 @@ Book an Ayurveda doctor appointment
 
 This project combines traditional Ayurvedic concepts with modern nutritional tracking.
 
-✨ Features
+#✨ Features
 🥗 1. Food Protein Calculator
 
 Users can enter their daily foods
@@ -28,13 +28,13 @@ The system determines their Vata / Pitta / Kapha balance
 
 Useful for personalized health suggestions
 
-👨‍⚕️ 3. Doctor Appointment
+#👨‍⚕️ 3. Doctor Appointment
 
 Users can book appointments with Ayurvedic doctors
 
 Simple form-based appointment system
 
-🛠️ Tech Stack
+#🛠️ Tech Stack
 
 Node.js
 
@@ -44,7 +44,7 @@ EJS (Embedded JavaScript Templates)
 
 Google Generative AI (@google/generative-ai)
 
-🚀 How to Run the Project Locally
+#🚀 How to Run the Project Locally
 
 Follow these steps:
 
